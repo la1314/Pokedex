@@ -1,0 +1,209 @@
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+
+/* Variables */
+$body-bg-color: rgb(2, 0, 36);
+$body-bg-gradient: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(214, 97, 43, 1) 38%, rgba(0, 212, 255, 1) 100%);
+$header-font-color: yellow;
+$header-text-shadow:rgb(0, 72, 154) 3px 0px 0px,
+rgb(0, 72, 154) 2.83487px 0.981584px 0px,
+rgb(0, 72, 154) 2.35766px 1.85511px 0px,
+rgb(0, 72, 154) 1.62091px 2.52441px 0px,
+rgb(0, 72, 154) 0.705713px 2.91581px 0px,
+rgb(0, 72, 154) -0.287171px 2.98622px 0px,
+rgb(0, 72, 154) -1.24844px 2.72789px 0px,
+rgb(0, 72, 154) -2.07227px 2.16926px 0px,
+rgb(0, 72, 154) -2.66798px 1.37182px 0px,
+rgb(0, 72, 154) -2.96998px 0.42336px 0px,
+rgb(0, 72, 154) -2.94502px -0.571704px 0px,
+rgb(0, 72, 154) -2.59586px -1.50383px 0px,
+rgb(0, 72, 154) -1.96093px -2.27041px 0px,
+rgb(0, 72, 154) -1.11013px -2.78704px 0px,
+rgb(0, 72, 154) -0.137119px -2.99686px 0px,
+rgb(0, 72, 154) 0.850987px -2.87677px 0px,
+rgb(0, 72, 154) 1.74541px -2.43999px 0px,
+rgb(0, 72, 154) 2.44769px -1.73459px 0px,
+rgb(0, 72, 154) 2.88051px -0.838247px 0px;
+$header-font-size: 28px;
+$margin-auto: 0 auto 0 auto;
+$cartas-bg-color:#D6C169;
+
+$carta-bg-color: gray;
+$carta-width: 700px;
+$carta-height: 500px;
+
+body {
+    background: $body-bg-color;
+    background: $body-bg-gradient;
+}
+
+.App {
+    text-align: center;
+}
+
+h1, .tipo h3, .Habilidades h3 {
+    margin: 0;
+}
+
+.contenedor,
+.cartaHead div,
+.cartaBody,
+.cabecera {
+    align-items: center;
+    align-content: center;
+}
+
+.cabecera {
+
+    width: 80%;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    margin: $margin-auto;
+    border: 0px solid #000000;
+    border-radius: 28px 28px 28px 28px;
+    font-family: Pokemon;
+    color: $header-font-color;
+    text-shadow: $header-text-shadow;
+    font-size: $header-font-size;
+}
+
+.contenedor {
+
+    width: 80%;
+    margin-top: 15px;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: $margin-auto;
+    margin-top: 15px;
+}
+
+.cartas {
+    border: 0px solid #000000;
+    background-color: $cartas-bg-color;
+    border-radius: 28px 28px 28px 28px;
+    border: solid 1px black;
+}
+
+.carta {
+    background: rgb(240, 255, 85);
+    background: radial-gradient(circle, rgba(240, 255, 85, 1) 0%, rgba(255, 129, 11, 1) 100%);
+    z-index: 80;
+    width: $carta-width;
+    height: $carta-height;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.carta img {
+    background-color: #F2F2F270;
+    height: 150px;
+    width: 150px;
+    border: solid black 1px;
+
+}
+
+.cerrarMapa {
+    float: right;
+    position: relative;
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 35px;
+    z-index: 99 !important;
+}
+
+.cartaHead {
+
+    margin-top: 10px;
+    margin-bottom: 3px;
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .namePokemon {
+            text-align: right;
+            font-size: 35px;
+        }
+
+        .number {
+            font-size: 35px;
+        }
+    }
+}
+
+
+.cartaBody {
+
+    width: 90%;
+    margin: $margin-auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.contentHT {
+    width: 90%;
+    margin: $margin-auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.divHabilidades {
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: start;
+}
+
+.divPuntos {
+
+    width: 95%;
+    margin: $margin-auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+
+.divEstadisticas {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
+    .contenedor {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
+    .contenedor {
+      grid-template-columns: 1fr;
+  
+    }
+   
+  }
+  
+  @media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .contenedor {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+    .contenedor {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
