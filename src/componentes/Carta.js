@@ -112,6 +112,11 @@ export default class Carta extends Component {
         )
     }
 
+    //Añade capitalize al string pasado
+    capitalize = (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
     render() {
 
         const { descripcion, pokemon, tipos, habilidades, descripcionHabilidades, estadisticas } = this.state
@@ -122,7 +127,7 @@ export default class Carta extends Component {
 
                 <div className='cartaHead'>
                     <div>
-                        <div className='namePokemon'>{pokemon.name}</div>
+                        <div className='namePokemon'>{this.capitalize(pokemon.name)}</div>
                         <div className='number'>{ 'Nº '+pokemon.id}</div>
                     </div>
                 </div>

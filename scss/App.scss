@@ -99,7 +99,8 @@ h1, .tipo h3, .Habilidades h3 {
     transform: translate(-50%, -50%);
 
     * {
-     font-size: medium;   
+     font-size: small;
+        text-align: left;
     }
 
 }
@@ -157,12 +158,12 @@ h1, .tipo h3, .Habilidades h3 {
         grid-template-columns: repeat(2, 1fr);
 
         .namePokemon {
-            font-size: 30px;
+            font-size: medium;
             align-content: center;
         }
 
         .number {
-            font-size: 30px;
+            font-size: medium;
         }
     }
 }
@@ -189,11 +190,10 @@ h1, .tipo h3, .Habilidades h3 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     text-align: start;
+    grid-column-gap: 5px;
 }
 
 .divPuntos {
-
-    width: 95%;
     margin: $margin-auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);

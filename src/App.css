@@ -67,7 +67,8 @@ h1, .tipo h3, .Habilidades h3 {
   transform: translate(-50%, -50%);
 }
 .carta * {
-  font-size: medium;
+  font-size: small;
+  text-align: left;
 }
 
 .carta img {
@@ -122,11 +123,11 @@ h1, .tipo h3, .Habilidades h3 {
   grid-template-columns: repeat(2, 1fr);
 }
 .cartaHead div .namePokemon {
-  font-size: 30px;
+  font-size: medium;
   align-content: center;
 }
 .cartaHead div .number {
-  font-size: 30px;
+  font-size: medium;
 }
 
 .cartaBody {
@@ -148,10 +149,10 @@ h1, .tipo h3, .Habilidades h3 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   text-align: start;
+  grid-column-gap: 5px;
 }
 
 .divPuntos {
-  width: 95%;
   margin: 0 auto 0 auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
