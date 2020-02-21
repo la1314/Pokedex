@@ -57,7 +57,7 @@ export default class Listado extends Component {
                                 <h4><b>{this.capitalize(item.name)}</b></h4>
                                 <h4><b>{this.formatWeight(item.weight)}</b></h4>
                             </div>
-                            <button onClick={() => this.showCard(item)}>Consultar Datos</button>
+                            <button className='buttonCard' onClick={() => this.showCard(item)}>Consultar Datos</button>
 
                         </div>
 
