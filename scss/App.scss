@@ -39,7 +39,9 @@ body {
     text-align: center;
 }
 
-h1, .tipo h3, .Habilidades h3 {
+h1,
+.tipo h3,
+.Habilidades h3 {
     margin: 0;
 }
 
@@ -99,8 +101,8 @@ h1, .tipo h3, .Habilidades h3 {
     transform: translate(-50%, -50%);
 
     * {
-     font-size: small;
-        text-align: left;
+        font-size: small;
+        text-align: center;
     }
 
 }
@@ -114,29 +116,34 @@ h1, .tipo h3, .Habilidades h3 {
 }
 
 /* Boton Carta */
-.buttonCard, .cerrarMapa {
-	box-shadow:inset 0px 1px 16px 0px #f9eca0;
-	background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
-	background-color:#f0c911;
-	border-radius:6px;
-	border:1px solid #e65f44;
-	display:inline-block;
-	cursor:pointer;
-	color:#c92200;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	text-decoration:none;
-    text-shadow:0px 1px 0px #ebd549;
+.buttonCard,
+.cerrarMapa {
+    box-shadow: inset 0px 1px 16px 0px #f9eca0;
+    background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+    background-color: #f0c911;
+    border-radius: 6px;
+    border: 1px solid #e65f44;
+    display: inline-block;
+    cursor: pointer;
+    color: #c92200;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ebd549;
     text-align: center;
 }
-.buttonCard:hover, .cerrarMapa {
-	background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
-	background-color:#f2ab1e;
+
+.buttonCard:hover,
+.cerrarMapa {
+    background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+    background-color: #f2ab1e;
 }
-.buttonCard:active, .cerrarMapa {
-	position:relative;
-	top:1px;
+
+.buttonCard:active,
+.cerrarMapa {
+    position: relative;
+    top: 1px;
 }
 
 .cerrarMapa {
@@ -159,7 +166,6 @@ h1, .tipo h3, .Habilidades h3 {
 
         .namePokemon {
             font-size: medium;
-            align-content: center;
         }
 
         .number {
@@ -175,6 +181,12 @@ h1, .tipo h3, .Habilidades h3 {
     margin: $margin-auto;
     display: grid;
     grid-template-columns: auto 1fr;
+    grid-column-gap: 2px;
+
+    * {
+        text-align: left;
+    }
+
 }
 
 .contentHT {
@@ -183,14 +195,18 @@ h1, .tipo h3, .Habilidades h3 {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 3fr 1fr;
+
 }
 
 .divHabilidades {
-    
+
+    margin-top: 3px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     text-align: start;
-    grid-column-gap: 5px;
+    * {
+        text-align: left;
+    }
 }
 
 .divPuntos {
@@ -206,36 +222,37 @@ h1, .tipo h3, .Habilidades h3 {
 }
 
 
-
-
-
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
+
     /* Styles */
     .contenedor {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
-  
-  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
+
     /* Styles */
     .contenedor {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-   
-  }
-  
-  @media (min-width:1025px) {
+
+}
+
+@media (min-width:1025px) {
+
     /* big landscape tablets, laptops, and desktops */
     .contenedor {
-      grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-  }
+}
 
-  @media (min-width:1281px) {
+@media (min-width:1281px) {
+
     /* hi-res laptops and desktops */
     .contenedor {
-      grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .carta {
@@ -252,15 +269,15 @@ h1, .tipo h3, .Habilidades h3 {
             font-size: large;
         }
     }
-    
+
     .carta img {
         background-color: #F2F2F270;
         height: 150px;
         width: 150px;
         border: solid black 1px;
-    
+
     }
-    
+
     .cerrarMapa {
         float: right;
         position: relative;
@@ -268,34 +285,34 @@ h1, .tipo h3, .Habilidades h3 {
         z-index: 99 !important;
         text-align: center;
     }
-    
+
     .cartaHead {
-    
+
         margin-top: 10px;
         margin-bottom: 3px;
-    
+
         div {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-    
+
             .namePokemon {
                 font-size: 35px;
             }
-    
+
             .number {
                 font-size: 35px;
             }
         }
     }
-    
+
     .cartaBody {
-    
+
         width: 90%;
         margin: $margin-auto;
         display: grid;
         grid-template-columns: auto 1fr;
     }
-    
+
     .contentHT {
         width: 90%;
         margin: $margin-auto;
@@ -303,26 +320,25 @@ h1, .tipo h3, .Habilidades h3 {
         display: grid;
         grid-template-columns: 3fr 1fr;
     }
-    
+
     .divHabilidades {
-        
+
         display: grid;
         grid-template-columns: 1fr 2fr;
         text-align: start;
     }
-    
+
     .divPuntos {
-    
+
         width: 95%;
         margin: $margin-auto;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
     }
-    
-    
+
+
     .divEstadisticas {
         display: flex;
         flex-direction: column-reverse;
     }
-  }
-  
+}
