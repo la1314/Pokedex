@@ -15,7 +15,7 @@ export default class Busqueda extends Component {
     }
 
     componentDidMount() {
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
+        fetch("https://pokeapi.co/api/v2/pokemon?limit=964")
             .then(res => res.json())
             .then(
                 (result) => {
